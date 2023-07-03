@@ -7,14 +7,8 @@
 // [“Russia”, “Denmark”, “Kazan”] → []
 
 
-System.Console.WriteLine("Введите:  ");
-string? str = Console.ReadLine();
-int count = str!.Length;
-string[] arr = new string[count];
-
-for (int i = 0; i < count; i++)
-{
-    arr[i] = Convert.ToString(str![i]); 
-}
-
-System.Console.WriteLine("[" + string.Join(", ", arr) + "]");
+Console.Clear();
+System.Console.WriteLine("Введите слова, числа, фразы через запятую: ");
+string? input = Console.ReadLine();
+string[] str = input!.Split(", ");
+System.Console.WriteLine("[ " + string.Join(", ", str) + " ]");
